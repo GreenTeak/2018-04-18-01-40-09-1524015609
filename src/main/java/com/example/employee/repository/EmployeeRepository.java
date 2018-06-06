@@ -1,13 +1,16 @@
 package com.example.employee.repository;
 
 import com.example.employee.entity.Employee;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
     //以下所有的*都代表变量
-
     //1.查询名字是*的第一个employee
 
     //2.找出Employee表中第一个姓名包含`*`字符并且薪资大于*的雇员个人信息
